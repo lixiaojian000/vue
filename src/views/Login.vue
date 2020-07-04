@@ -1,7 +1,5 @@
 <template>
   <div class="login1">
-    <div class="content">
-      <div id="large-header" class="large-header">
         <div class="logo_box">
           <h3>欢迎你</h3>
           <form
@@ -86,10 +84,9 @@
           </form>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 <script src="../assets/js/checklogin.js">
+
 </script>
 
 <style scoped>

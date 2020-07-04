@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <hd ref="header"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+  import 'bootstrap/dist/js/bootstrap.min.js'
+  import hd from "./hd";
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    hd
   }
 };
 </script>
+<style>
+  @import "../assets/css/bootstrap.min.css";
+
+</style>

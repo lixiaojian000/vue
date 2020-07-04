@@ -1,13 +1,12 @@
 /* Header */
-.large-header {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background: #333;
+
+ .login1{
+	width:100%;
+	height:100%;
+	position:fixed;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
-	z-index: 1;
 	background-image: url('../demo-1-bg.jpg');
 }
 
@@ -30,7 +29,6 @@
 	font: 20px "microsoft yahei", Helvetica, Tahoma, Arial,
 		"Microsoft jhengHei", sans-serif;
 	color: #FFFFFF;
-	height: 20px;
 	line-height: 20px;
 	padding: 0 0 35px 0;
 }
@@ -49,8 +47,7 @@
 
 .input_outer {
 	height: 46px;
-	padding: 0 5px;
-	padding-left: 0px;
+	padding: 0 5px 0 0;
 	margin-bottom: 22px;
 	border-radius: 50px;
 	position: relative;
@@ -71,18 +68,15 @@
 .u_user {
 	width: 27px;
 	height: 27px;
-	background: url('../../assets/login_ico.png');
-	background-position: -125px 0;
+	background: url('../../assets/login_ico.png') -125px 0;
 	position: absolute;
-	margin: 10px 13px;
-	margin-left:-33px;
+	margin: 10px 13px 10px -33px;
 }
 
 .u_user1 {
 	width: 27px;
 	height: 27px;
-	background: url('../../assets/login_ico.png');
-	background-position: 0px -202px;
+	background: url('../../assets/login_ico.png') 0 -202px;
 	position: absolute;
 	margin-top: 9px;
 	margin-left: 16px;
@@ -91,18 +85,15 @@
 .u_user2 {
 	width: 25px;
 	height: 25px;
-	background: url('../../assets/login_ico.png');
-	background-position: -85px 0;
+	background: url('../../assets/login_ico.png') -85px 0;
 	position: absolute;
-	margin: 10px 13px;
-	margin-left:-21px;
+	margin: 10px 13px 10px -21px;
 }
 
 .u_user3 {
 	width: 27px;
 	height: 27px;
-	background: url('../../assets/login_ico.png');
-	background-position: 0px -202px;
+	background: url('../../assets/login_ico.png') 0 -202px;
 	position: absolute;
 	margin-top: 9px;
 	margin-left: 16px;
@@ -153,8 +144,7 @@
 	background-image: url(../../assets/login_ico.png);
 	background-position: -125px -34px;
 	position: absolute;
-	margin: 10px 13px;
-	margin-left:-33px;
+	margin: 10px 13px 10px -33px;
 }
 
 .l-login {
@@ -215,7 +205,7 @@
 	height: 46px;
 	font-weight: bold;
 	margin-left: 202px;
-	margin-right: 0px;
+	margin-right: 0;
 	margin-top: -48px;
 	border-radius: 50px;
 	cursor: pointer;
@@ -247,6 +237,6 @@
 input:focus:-webkit-autofill,
 input:-webkit-autofill{
 	-webkit-text-fill-color:  lightgoldenrodyellow !important ;
-	-webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+	-webkit-box-shadow: 0 0 0 1000px transparent inset !important;
 	transition: background-color 500000s ease-in-out 50000s;
 }

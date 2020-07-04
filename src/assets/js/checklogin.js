@@ -19,7 +19,6 @@ export default {
     biao1out: function() {
       this.biao1 = true;
       var un =this.$refs.username.value;
-      alert(un);
       if (un === "") {
         this.cuwu = "请输入用户名！";
         this.$refs.biao1.style.backgroundPosition = "0 -232px";
@@ -64,7 +63,12 @@ export default {
           // 将用户token保存到vuex中
           //this.changeLogin({Authorization: this.userToken});
           //this.$router.push('/');
+          var token=res.data['token'];
           alert("登陆成功");
+          localStorage.setItem("token", token);
+          this.$router.push({ path: '/home' });
+          //根据store中set_token方法将token保存至localStorage/sessionStorage中，
+          // data["Authentication-Token"]，获取token的value值
         })
         .catch(error => {
           alert("账号或密码错误");

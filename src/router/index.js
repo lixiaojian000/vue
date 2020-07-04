@@ -1,15 +1,16 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Login from "../views/Login";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "login",
+    component: Login
   },
+
   {
     path: "/about",
     name: "About",
@@ -20,9 +21,9 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   }
 ];
-
 const router = new VueRouter({
-  routes
+  routes,
+  //去除浏览器上的#
+  mode: "history"
 });
-
 export default router;

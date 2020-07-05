@@ -15,6 +15,15 @@ export default {
     };
   },
   methods: {
+    open() {
+      this.$message({
+          message: '登录成功！',
+          type: 'success',
+        //消息停留的时间
+          duration: 1200,
+          }
+      );
+    },
     //输入姓名时的前端验证
     biao1out: function() {
       this.biao1 = true;
@@ -59,14 +68,16 @@ export default {
       })
         .then(res => {
           console.log(res.data);
+          this.open();
           //this.userToken = 'Bearer ' + res.data.data.body.token;
           // 将用户token保存到vuex中
           //this.changeLogin({Authorization: this.userToken});
           //this.$router.push('/');
           var token=res.data['token'];
-          alert("登陆成功");
           localStorage.setItem("token", token);
-          this.$router.push({ path: '/home' });
+          setTimeout(() =>{
+            this.$router.push({ path: '/home' });
+          },1600);
           //根据store中set_token方法将token保存至localStorage/sessionStorage中，
           // data["Authentication-Token"]，获取token的value值
         })
@@ -74,6 +85,7 @@ export default {
           alert("账号或密码错误");
           console.log(error);
         });
+
     }
   }
 };

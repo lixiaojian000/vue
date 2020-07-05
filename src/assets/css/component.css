@@ -234,9 +234,16 @@
 	border-radius: 50px;
 	background: #3AAAE6;
 }
+/*隐藏浏览器自带cookie的样式*/
 input:focus:-webkit-autofill,
 input:-webkit-autofill{
 	-webkit-text-fill-color:  lightgoldenrodyellow !important ;
 	-webkit-box-shadow: 0 0 0 1000px transparent inset !important;
 	transition: background-color 500000s ease-in-out 50000s;
 }
+
+/*alert 登录弹出框样式*/
+.el-message--success {
+	top: 70px !important;
+}
+
